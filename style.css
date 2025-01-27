@@ -1,0 +1,238 @@
+/* Styles de base pour le corps */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Gris clair */
+}
+
+/* Style pour la navigation */
+nav {
+    background-color: #2c3e50;  /* Bleu foncé */
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Liste dans la navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des éléments de la liste */
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* Espacement entre les liens */
+}
+
+/* Style des liens */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+/* Effet hover sur les liens */
+nav ul li a:hover {
+    background-color: #3498db; /* Bleu clair */
+    color: white;
+}
+
+/* Style pour rendre la navigation responsive */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Style du titre h1 */
+h1 {
+    text-align: center;           /* Centrage du texte */
+    font-size: 32px;              /* Taille de la police */
+    font-weight: bold;            /* Texte en gras */
+    color: white;                 /* Texte blanc */
+    background-color: #2980b9;    /* Bleu clair */
+    padding: 15px 20px;           /* Espacement intérieur */
+    border-radius: 10px;          /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre */
+    margin: 20px auto;            /* Espacement extérieur */
+    width: 80%;                   /* Largeur réduite */
+    max-width: 600px;             /* Largeur maximale */
+}
+
+/* Centrer le tableau */
+.table-container {
+    width: 80%;
+    margin: 20px auto; /* Centre horizontalement */
+    text-align: center;
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style des en-têtes */
+thead {
+    background-color: #2980b9; /* Bleu */
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style des lignes paires */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Effet hover sur les lignes */
+tbody tr:hover {
+    background-color: #d6eaf8;
+}
+
+/* Style du bouton supprimer */
+.edit-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #3cb4e7; 
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #3cb4e7;
+}
+
+/* Style du bouton supprimer */
+.edit-btn-cancel {
+    text-decoration: none;
+    color: white;
+    background-color: #3cb4e7; 
+    margin-top:5px;
+    padding: 12px; /* Padding top de 5px */
+    font-size:18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Alignement du texte au centre */
+}
+
+/* Style du bouton supprimer */
+.delete-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c; /* Rouge */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+    width: 50%;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+/* Style du titre */
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Style des labels */
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #2c3e50;
+}
+
+/* Style des champs */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Effet au focus des champs */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Style du bouton */
+.form-container button {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Effet hover sur le bouton */
+.form-container button:hover {
+    background-color: #2980b9;
+}
+
+/* Espacement entre les boutons si nécessaire */
+.form-container .button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container .button-group button {
+    width: 48%;
+}
+
