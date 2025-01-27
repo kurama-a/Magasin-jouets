@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
 
     if ($stmt->execute()) {
         // Redirection vers la liste après suppression
-        header("Location: /Projet_magasin/jouets/liste.php?message=deleted");
+        header("Location: liste.php?message=deleted");
         exit();
     } else {
         echo "Erreur lors de la suppression : " . $conn->error;

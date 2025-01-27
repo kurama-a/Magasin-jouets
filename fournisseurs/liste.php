@@ -36,7 +36,7 @@
                         <td>{$row['Adresse']}</td>
                         <td>{$row['Telephone']}</td>
                         <td>{$row['Email']}</td>                        
-                        <td><a class='edit-btn'>Modifier</a>
+                        <td><a class='edit-btn' href='modifier.php?id={$row['ID_Fournisseur']}'>Modifier</a></td>
                         <td><a class='delete-btn' href='supprimer.php?id={$row['ID_Fournisseur']}'>Supprimer</a></td>
                     </tr>";
                 }
