@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prix = $_POST['prix'];
     $categorie = $_POST['categorie'];
     $stock = $_POST['stock'];
-    $id_fournisseur = $_POST['id_fournisseur']; // Récupération du fournisseur sélectionné
+    $id_fournisseur = $_POST['id_fournisseur']; 
 
     $stmt = $conn->prepare("INSERT INTO jouet (Nom, Prix, Categorie, Stock_disponible, ID_Fournisseur) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sdsii", $nom, $prix, $categorie, $stock, $id_fournisseur);

@@ -9,5 +9,7 @@
 <body>    
     <?php include "base/nav.php"?>
     <h1>Bienvenue dans le magasin de jouets</h1>
+
+    <img width="50%" src="accueil.jpg">
 </body>
 </html>

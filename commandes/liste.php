@@ -8,7 +8,7 @@
 <body>
     <?php include "../base/nav.php"; ?>  <!-- Inclusion du menu -->
 
-    <h1>Liste des Commandes</h1>
+    <h1>Liste des commandes</h1>
 
     <div class="table-container">  <!-- Conteneur pour centrer le tableau -->
         <table>
@@ -18,7 +18,6 @@
                     <th>Date</th>
                     <th>Total</th>
                     <th>Client</th>
-                    <th>Modifier</th>
                     <th>Supprimer</th>
                 </tr>
             </thead>
@@ -40,13 +39,16 @@
                         <td>{$row['Date_Commande']}</td>
                         <td>{$row['Total']} €</td>
                         <td>{$row['Nom']} {$row['Prenom']}</td>
-                        <td><a class='edit-btn'>Modifier</a>
                         <td><a class='delete-btn' href='supprimer.php?id={$row['ID_Commande']}'>Supprimer</a></td>
                     </tr>";
                 }
                 ?>
             </tbody>
         </table>
+        <!-- Bouton pour ajouter un jouet -->
+        <div class="button-container">
+            <a class="add-btn" href="ajouter.php">Ajouter une commande</a>
+        </div>
     </div>
 </body>
 </html>

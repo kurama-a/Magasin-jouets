@@ -35,8 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prix = $_POST['prix'];
     $categorie = $_POST['categorie'];
     $stock = $_POST['stock'];
-    $id_fournisseur = $_POST['id_fournisseur']; // Récupération du fournisseur sélectionné
+    $id_fournisseur = $_POST['id_fournisseur']; 
 
+  
     $stmt = $conn->prepare("UPDATE jouet SET Nom = ?, Prix = ?, Categorie = ?, Stock_disponible = ?, ID_Fournisseur = ? WHERE ID_Jouet = ?");
     $stmt->bind_param("sdsiii", $nom, $prix, $categorie, $stock, $id_fournisseur, $id);
 

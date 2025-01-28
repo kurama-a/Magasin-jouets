@@ -8,9 +8,9 @@
 <body>
     <?php include "../base/nav.php"; ?>  <!-- Inclusion du menu -->
 
-    <h1>Liste des Jouets</h1>
+    <h1>Liste des jouets</h1>
 
-    <div class="table-container">  <!-- Ajout d'un conteneur pour centrer -->
+    <div class="table-container"> 
         <table>
             <thead>
                 <tr>
@@ -48,7 +48,7 @@
 
         <!-- Bouton pour ajouter un jouet -->
         <div class="button-container">
-            <a class="add-btn" href="ajouter.php">Ajouter un Jouet</a>
+            <a class="add-btn" href="ajouter.php">Ajouter un jouet</a>
         </div>
     </div>
 </body>

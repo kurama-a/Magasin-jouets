@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Liste des fournisseurs</title>
-    <link rel="stylesheet" href="../style.css"> <!-- Inclusion du CSS -->
+    <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
-    <?php include "../base/nav.php"; ?>  <!-- Inclusion du menu -->
+    <?php include "../base/nav.php"; ?>  
 
-    <h1>Liste des Fournisseurs</h1>
+    <h1>Liste des fournisseurs</h1>
 
-    <div class="table-container">  <!-- Conteneur pour centrer le tableau -->
+    <div class="table-container">  
         <table>
             <thead>
                 <tr>
@@ -43,6 +43,10 @@
                 ?>
             </tbody>
         </table>
+        <!-- Bouton pour ajouter un jouet -->
+        <div class="button-container">
+            <a class="add-btn" href="ajouter.php">Ajouter un fournisseur</a>
+        </div>
     </div>
 </body>
 </html>
