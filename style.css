@@ -264,11 +264,11 @@ img {
 .jouet-entry button {
     background-color: red;
     color: white;
-    font-size: 12px;
-    padding: 5px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 20%; 
 }
 
 .jouet-entry button:hover {

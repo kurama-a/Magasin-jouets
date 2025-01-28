@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Liste des commandes</title>
-    <link rel="stylesheet" href="../style.css"> <!-- Lien vers le CSS -->
+    <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
-    <?php include "../base/nav.php"; ?>  <!-- Inclusion du menu -->
+    <?php include "../base/nav.php"; ?>  
 
     <h1>Liste des commandes</h1>
 
-    <div class="table-container">  <!-- Conteneur pour centrer le tableau -->
+    <div class="table-container">  
         <table>
             <thead>
                 <tr>
@@ -18,6 +18,7 @@
                     <th>Date</th>
                     <th>Total</th>
                     <th>Client</th>
+                    <th>Jouets achetés</th>
                     <th>Supprimer</th>
                 </tr>
             </thead>
@@ -25,13 +26,15 @@
                 <?php
                 include "../db.php";
 
-                // Jointure pour afficher le nom du client associé à chaque commande
-                $result = $conn->query("
-                    SELECT COMMANDE.ID_Commande, COMMANDE.Date_Commande, COMMANDE.Total, 
-                           CLIENT.Nom, CLIENT.Prenom 
-                    FROM COMMANDE 
-                    INNER JOIN CLIENT ON COMMANDE.ID_Client = CLIENT.ID_Client
-                ");
+                // Jointure pour afficher les détails des commandes avec les jouets et quantités
+                $result = $conn->query("SELECT COMMANDE.ID_Commande, COMMANDE.Date_Commande, COMMANDE.Total, 
+                                              CLIENT.Nom, CLIENT.Prenom, 
+                                              GROUP_CONCAT(CONCAT(JOUET.Nom, ' (', DETAILS_COMMANDE.Quantite, ')') SEPARATOR ', ') AS JouetsAchetes
+                                       FROM COMMANDE 
+                                       INNER JOIN CLIENT ON COMMANDE.ID_Client = CLIENT.ID_Client
+                                       INNER JOIN DETAILS_COMMANDE ON COMMANDE.ID_Commande = DETAILS_COMMANDE.ID_Commande
+                                       INNER JOIN JOUET ON DETAILS_COMMANDE.ID_Jouet = JOUET.ID_Jouet
+                                       GROUP BY COMMANDE.ID_Commande");
 
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>
@@ -39,6 +42,7 @@
                         <td>{$row['Date_Commande']}</td>
                         <td>{$row['Total']} €</td>
                         <td>{$row['Nom']} {$row['Prenom']}</td>
+                        <td>{$row['JouetsAchetes']}</td>
                         <td><a class='delete-btn' href='supprimer.php?id={$row['ID_Commande']}'>Supprimer</a></td>
                     </tr>";
                 }

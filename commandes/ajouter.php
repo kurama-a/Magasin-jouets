@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
 
-            <button type="button" onclick="ajouterJouet()">Ajouter un Jouet</button>
+            <button style="background-color:#41dc54;" type="button" onclick="ajouterJouet()">Ajouter un Jouet</button>
             <button type="submit">Ajouter Commande</button>
             <a class='edit-btn-cancel' href="liste.php">Annuler</a>
         </form>
