@@ -32,6 +32,8 @@
 - Amélioration du **style de la page "Ajouter une commande"**.
 - Ajout de la **liste des jouets achetés dans les commandes**.
 - Changement de la **couleur du bouton "Ajouter Jouet"** sur la page d'ajout de commande.
+  
+---
 
 ## 🔹 Version 0.5
 - Ajout du fichier CHANGELOG.md pour lister les modifications pour chaque version
